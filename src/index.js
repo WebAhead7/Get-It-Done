@@ -1,17 +1,17 @@
-test("Submitting a new task adds it to the list", t => {
-    // test goes here
-  });
 
 
-  test("Checking an entry marks it as complete", t => {
-    // test goes here
-  });
-  
-  test("Deleting an entry removes it from the list", t => {
-    // test goes here
-  });
+
+localStorage.setItem('key', 'value');
+let variable = localStorage.getItem('key');
+localStorage.setItem("TODO", JSON.stringify(LIST));
+
+let LIST, id;
+let data = localStorage.getItem("TODO");
+if (data){
+
+} else{
+    LIST = [];
+    id = 0;
+}
 
 
-  test("Toggling the filter hides completed tasks from the list", t => {
-    // test goes here
-  });
