@@ -1,3 +1,5 @@
+
+
 let ToDoList=[];
 const Clear=document.querySelector(".clear")
 const Toggle=document.querySelector("toggle")
@@ -5,10 +7,30 @@ const Add=document.querySelector("add")
 const Delete=document.querySelector("trash")
 const list=document.querySelector("#list")
 
+
 const Deleting=target=>{
     ToDoList.splice(target,1);
 };
 
+
+
+localStorage.setItem('key', 'value');
+let variable = localStorage.getItem('key');
+localStorage.setItem("TODO", JSON.stringify(LIST));
+
+let LIST, id;
+let data = localStorage.getItem("TODO");
+if (data){
+  LIST = JSON.parse(data);
+  loadToDo(LIST);
+  id = LIST.length
+
+} else{
+    LIST = [];
+    id = 0;
+}
+
+  
 const Adding=text=>{
     ToDoList.push(
         {
@@ -18,10 +40,13 @@ const Adding=text=>{
     )
 };
 
+
 const Checking=target=>{
     ToDoList[target].IsChecked=(ToDoList[target].IsChecked+1)%2;
 };
 
+
+=======
 const Toggling=target=>{
     return ToDoList.filter(obj=>obj.IsChecked==0)
 };
@@ -55,3 +80,4 @@ const Render=arr=>{
         list.insertAdjacentHTML("beforeend",html);
     });
 }
+
