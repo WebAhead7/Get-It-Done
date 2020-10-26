@@ -1,0 +1,35 @@
+body {
+}
+
+.container {
+  padding: 10px;
+  width: 380px;
+  margin: 0 auto;
+  border-style: solid;
+}
+
+.header {
+  width: 380px;
+  height: 200px;
+  border-style: solid;
+  border-color: blue;
+}
+
+.content {
+  width: 380px;
+  height: 350px;
+  border-style: solid;
+  border-color: green;
+}
+
+.content ul {
+  padding: 10px;
+  margin: 15px;
+  border-style: solid;
+  border-color: red;
+}
+
+.add-item {
+  border-style: solid;
+  border-color: orange;
+}
