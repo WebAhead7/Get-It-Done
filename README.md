@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-  <img src="/img/readme1.gif" width=720px height=360px />
+  <img src="/src/img/header.jpg" width=720px height=360px />
 </p>
 
 <!-- TABLE OF CONTENTS -->
