@@ -1,4 +1,5 @@
-let ToDoList=[];
+localStorage.clear();
+let ToDoList = JSON.parse(localStorage.getItem("ToDoList") || "[]");
 const Clear=document.querySelector(".clear")
 const Toggle=document.querySelector("toggle")
 const Add=document.querySelector("add")
@@ -54,4 +55,6 @@ const Render=arr=>{
         </li>`;
         list.insertAdjacentHTML("beforeend",html);
     });
+    localStorage.setItem("ToDoList",JSON.stringify(ToDoList))
+    
 }
