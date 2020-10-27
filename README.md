@@ -48,9 +48,9 @@ To do lists come in all shapes and sizes. It always used to be something that yo
 
 All it takes is just a few minutes every day to keep a to do list up to date. With a to do list, you can complete goals without wasting time trying to figure out priorities. Your productivity will increase, you won’t forget things, your time management will improve and you’ll be able to manage your tasks more effectively.
 <p align="center">
-  <img src="/img/readmee2.gif" width=720px height=360px />
+  <img src="/src/img/bbg1.jpg" width=720px height=360px />
 </p><p align="center">
-  <img src="/img/readmeeq2.gif" width=720px height=360px />
+  <img src="/src/img/bbg.jpg" width=720px height=360px />
 </p>
 
 # Get-It-Done
@@ -96,4 +96,7 @@ do on mobile, laptop, desktop, tablet and even your watch!
 * Myassar: [@GitHub](https://github.com/myassar1211)
 * Rakad: [@GitHub](https://github.com/rakad-kh)
 <br>
+<p align="center">
+  <img src="/src/img/readmeimg1.gif" width=720px height=360px />
+</p>
 
