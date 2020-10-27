@@ -111,9 +111,9 @@ const Render = arr => {
     list.innerHTML = ""
     arr.forEach(element => {
         html = `<li class="item"  id="${arr.indexOf(element)}">
-            <input type="button" class="checked${element.IsChecked}" job="check">
+            <i class="fa fa-check-circle" id="checked${element.IsChecked}" job="check"></i>
             <p  class="checked${element.IsChecked}">${element.text}</p>
-            <i class="trash" job="delete">O</i>
+            <i class="fa fa-trash" id="trash" job="delete"></i>
         </li>`
         list.insertAdjacentHTML("beforeend", html);
     });

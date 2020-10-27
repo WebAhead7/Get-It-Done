@@ -1,35 +1,83 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0,0,0,0.1);
+  font-family: 'Titillium Web', sans-serif;
+}
+
+
 .container {
-  padding: 10px;
-  width: 380px;
+  width: 430px;
   margin: 0 auto;
-  border-style: solid;
-  grid-template-rows: auto;
+  margin:0 auto;
+  padding:10px;
 }
 
 .header {
-  width: 380px;
-  height: 100px;
-  border-style: solid;
-  border-color: blue;
+  height: 200px;
+  background-image: url("../src/img/bg.jpg"); 
+  border-radius: 15px 15px 0 0;
+  background-size: contain;
+  position: relative;
+}
+ 
+.clear {
+  position: absolute;
+  right:20px;
+  top: 20px;
+  font-size: large;
 }
 
-input.checked0{
-  background-color: blue;
+.clear i:hover{
+  cursor: pointer;
+  text-shadow: 1px 3px 5px red;
+  transform: rotate(45deg);
+  font-size: x-large;
 }
-input.checked1{
-  background-color: red;
+
+.fa-filter {
+  position: absolute;
+  right:20px;
+  bottom: 20px;
+  color: white;
 }
+
+.toggle i:hover{
+  cursor: pointer;
+  text-shadow: 1px 3px 5px red;
+  transform: rotate(45deg);
+  font-size: x-large;
+}
+
+#date{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: white;
+  text-shadow: 1px 3px 5px red;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: large;
+}
+
+
+.fa-check-circle#checked1{
+  color: green;
+}
+
 
 p.checked1{
   text-decoration: line-through;
 }
 
 .content {
-  width: 380px;
   height: 400px;
   border-style: solid;
   border-color: green;
+  
 }
+
+
+
 
 
 .list {
@@ -38,12 +86,19 @@ p.checked1{
 }
 
 .add-item {
-  width: 380px;
   border-style: solid;
-  height: 100px;
+  height: 70px;
   border-color: orange;
 }
 
 .content ul{
-  flex: auto;
+ padding-left: 5px;
+ list-style-type: none;
+ padding-right: 5px;
+ 
+}
+
+.item{
+  display: flex;
+  justify-content: space-between;  
 }
