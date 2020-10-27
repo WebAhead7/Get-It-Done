@@ -62,7 +62,7 @@ do on mobile, laptop, desktop, tablet and even your watch!
 
 
 <p align="center">
-  <img src=" " width=720px height=360px />
+  <img src="/src/img/doit.gif" width=720px height=360px />
 </p>
 
 
