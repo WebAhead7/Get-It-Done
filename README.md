@@ -1,4 +1,5 @@
 # Get-It-Done
+<p>
 ToDo list is a simple web application to save Your daily tasks in order not to miss anything, just to type any task you need.
 What is a todo list and how can it help in business and daily life?
 
@@ -7,6 +8,8 @@ You sometimes forget to do things that are important
 People have to chase you to get things done
 You find it a struggle to keep to deadlines
 Don’t think you’re unusual because there are thousands of people who struggle with the same every day, not just in the workplace but in their personal life too. Luckily, there is something very simple you can do to keep your life and work more organised.
+</p>
+
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
@@ -15,7 +18,7 @@ Don’t think you’re unusual because there are thousands of people who struggl
   <h2 align="center"><a href="https://webahead7.github.io/Get-It-Done/">TRY IT NOW</h2>
 
 
-
+<p>
 I'm a huge fan of to-do lists. They help me stay organized, prioritize my day, and add structure to an otherwise chaotic schedule. I recently discovered what appears to be the best yet simplest way to keep a to-do list.
 When you complete a task, you can cross it off your list. This gives you a sense of progress and achievement, something you’ll lack if you’re always rushing from one task to the next. If you feel a sense of achievement, it spurs you on and motivates you to keep moving forward.
 
@@ -26,7 +29,7 @@ Improves your memory: A to do list acts as an external memory aid. It’s only p
 Increases productivity: A to do list allows you to prioritize the tasks that are more important. This means you don’t waste time on tasks that don’t require your immediate attention. Your list will help you stay focused on the tasks that are the most important.
 
 Helps with motivation: To do lists are a great motivational tool because you can use them to clarify your goals. You can divide your long-term goal into smaller, more achievable short-term goals and as you tick each one off your list, your confidence will increase.
-
+</p>
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
