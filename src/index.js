@@ -1,4 +1,8 @@
 
+localStorage.clear();
+let ToDoList = JSON.parse(localStorage.getItem("ToDoList") || "[]");
+
+
 
 const Clear=document.querySelector(".clear")
 const Toggle=document.querySelector("toggle")
@@ -33,9 +37,9 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 //localStorage:
 
-localStorage.setItem('key', 'value');
-let variable = localStorage.getItem('key');
-localStorage.setItem("TODO", JSON.stringify(LIST));
+// localStorage.setItem('key', 'value');
+// let variable = localStorage.getItem('key');
+// localStorage.setItem("TODO", JSON.stringify(LIST));
 
 let LIST, id;
 let data = localStorage.getItem("TODO");
@@ -101,5 +105,9 @@ const Render=arr=>{
         </li>`;
         list.insertAdjacentHTML("beforeend",html);
     });
+
+    localStorage.setItem("ToDoList",JSON.stringify(ToDoList))
+    
+}
 }
 
