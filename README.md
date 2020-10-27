@@ -52,7 +52,8 @@ All it takes is just a few minutes every day to keep a to do list up to date. Wi
 </p><p align="center">
   <img src="/img/readmeeq2.gif" width=720px height=360px />
 </p>
-## Get-It-Done :
+## Get-It-Done
+
 Welcome to Get-It-Done Organize anything with anyone, anywhere
 Wherever you are, take your to do list with you. Access Any.
 do on mobile, laptop, desktop, tablet and even your watch!
