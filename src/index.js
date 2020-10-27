@@ -1,25 +1,13 @@
 
-localStorage.clear();
 let ToDoList = JSON.parse(localStorage.getItem("ToDoList") || "[]");
+const Clear = document.querySelector(".clear")
+const Toggle = document.querySelector(".toggle")//FILTER
+const Add = document.querySelector("add")
+const list = document.querySelector("#list")
 
-
-
-const Clear=document.querySelector(".clear")
-const Toggle=document.querySelector("toggle")
-const Add=document.querySelector("add")
-const Delete=document.querySelector("trash")
-const list=document.querySelector("#list")
-
-//variables:
-
-let ToDoList=[];
-
-
-
-const Deleting=target=>{
-    ToDoList.splice(target,1);
+const Deleting = target => {
+    ToDoList.splice(target, 1);
 };
-
 
 // //clear the list:
 // const clear = document.querySelector(".clear");
@@ -28,10 +16,9 @@ const Deleting=target=>{
 //     location.reload();                         //reload the page
 // })
 
-
 //show today date:
 const dateElement = document.getElementById("date");
-let options = {weekday:'long', month:'short', day:'numeric'};
+let options = { weekday: 'long', month: 'short', day: 'numeric' };
 let today = new Date();
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
@@ -43,71 +30,94 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 let LIST, id;
 let data = localStorage.getItem("TODO");
-if (data){
-  LIST = JSON.parse(data);
-  loadToDo(LIST);
-  id = LIST.length
+if (data) {
+    LIST = JSON.parse(data);
+    loadToDo(LIST);
+    id = LIST.length
 
-} else{
+} else {
     LIST = [];
     id = 0;
 }
 
 
 
-  
-const Adding=text=>{
+
+const Adding = text => {
     ToDoList.push(
         {
-           text:text,
-           IsChecked: 0 
+            text: text,
+            IsChecked: 0
         }
     )
+    localStorage.setItem("ToDoList", JSON.stringify(ToDoList))
 };
 
 
-const Checking=target=>{
-    ToDoList[target].IsChecked=(ToDoList[target].IsChecked+1)%2;
+const Checking = target => {
+    ToDoList[target].IsChecked = (ToDoList[target].IsChecked + 1) % 2;
+    localStorage.setItem("ToDoList", JSON.stringify(ToDoList))
 };
 
+Clear.addEventListener("click", function (event) {
+    localStorage.clear();
+    ToDoList = JSON.parse(localStorage.getItem("ToDoList") || "[]");
+    Render(ToDoList)
+    console.log("dssds");
 
+})
 
-const Toggling=target=>{
-    return ToDoList.filter(obj=>obj.IsChecked==0)
-};
+Toggle.addEventListener("click", function (event) {
+    console.log((Toggle.id));
 
-document.addEventListener("keyup",function(event){
-    if(event.keyCode==13){
-        const toDo=input.value;
+    if ("false" === Toggle.id) {
+        let filtered = ToDoList.filter(mission => !mission.IsChecked)
+        Render(filtered)
+        Toggle.id = "true";
+    }
+    else {
+        Render(ToDoList);
+        Toggle.id = "false"
+    }
+})
+
+document.addEventListener("keyup", function (event) {
+    if (event.keyCode == 13) {
+        const toDo = input.value;
         //if the input isn't empty:
-        if (toDo){
+        if (toDo) {
             Adding(toDo)
         }
-        input.value="";  //clear the input
+        input.value = "";  //clear the input
         Render(ToDoList)
     }
 })
 
-list.addEventListener("click",function(event){
-    let element_div=event.target;
-    console.log(element_div);
-
-    
+list.addEventListener("click", function (event) {
+    let element_div = event.target;
+    element_id = element_div.parentElement.id;
+    if (element_div.getAttribute("job") === "check") {
+        if (element_div)
+            Checking(element_id);
+    }
+    if (element_div.getAttribute("job") === "delete") {
+        Deleting(element_id)
+    }
+    Render(ToDoList);
 })
 
-const Render=arr=>{
-    list.innerHTML=""
+const Render = arr => {
+    let html = ``;
+    list.innerHTML = ""
     arr.forEach(element => {
-        let html= `<li class="item">
-            <i class="complete" job="complete"></i>
-            <p class="text">${element.text}</p>
+        html = `<li class="item"  id="${arr.indexOf(element)}">
+            <input type="button" class="checked${element.IsChecked}" job="check">
+            <p  class="checked${element.IsChecked}">${element.text}</p>
             <i class="trash" job="delete">O</i>
-        </li>`;
-        list.insertAdjacentHTML("beforeend",html);
+        </li>`
+        list.insertAdjacentHTML("beforeend", html);
     });
 
-    localStorage.setItem("ToDoList",JSON.stringify(ToDoList))
-    
-}
 }
 
+Render(ToDoList);

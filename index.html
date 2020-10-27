@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,25 @@
     <!-- connecting css to html-->
     <link rel="stylesheet" href="/src/index.css">
 </head>
+
 <body>
-    <div class="container"> 
+    <div class="container">
         <div class="header">
-            <div class="clear"> 
-                <input type="button"> Clear </i>
-            </div>
-            <div class ="hide">
-                <input type="button"> Filter </button>
+            <input type="button" class="clear"> Clear
+            <div class="hide">
+                <input type="button" class="toggle" id="false"> Filter
             </div>
             <div id="date"></div>
 
         </div>
         <div class="content">
-             <ul id="list">
+            <ul id="list">
 
-                <li class="item">
-                    <i class="fa fa-circle-thin complete"></i>
-                    <p class="text "> </p>
-                    <i class="fa fa-trash-o deleter"></i>
-                
                 </li>
-             </ul>
-            
-    
-             </ul>
+            </ul>
+
+
+            </ul>
         </div>
         <div class="add-item">
             <i class="fa fa-plus-circle"></i>
@@ -48,4 +43,5 @@
     <!-- Include the tests for our code (it's best to keep these separate) -->
     <script src="/src/index.test.js"></script>
 </body>
+
 </html>
