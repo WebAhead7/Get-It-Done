@@ -1,4 +1,5 @@
 # Get-It-Done
+ToDo list is a simple web application to save Your daily tasks in order not to miss anything, just to type any task you need.
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
@@ -40,10 +41,10 @@ do on mobile, laptop, desktop, tablet and even your watch!
 
 <!-- GETTING STARTED -->
 ## Getting Started
-1. 
-2.
-3.
-4.
+1. Type any task you need to do it.
+2. Chick any task that it done.
+3. 
+4.  
  
 
 <!-- Contact US -->
