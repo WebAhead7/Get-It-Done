@@ -1,11 +1,15 @@
 
 
-let ToDoList=[];
 const Clear=document.querySelector(".clear")
 const Toggle=document.querySelector("toggle")
 const Add=document.querySelector("add")
 const Delete=document.querySelector("trash")
 const list=document.querySelector("#list")
+
+//variables:
+
+let ToDoList=[];
+
 
 
 const Deleting=target=>{
@@ -13,6 +17,21 @@ const Deleting=target=>{
 };
 
 
+// //clear the list:
+// const clear = document.querySelector(".clear");
+// clear.addEventListener('click', function(){
+//     localStorage.clear();
+//     location.reload();                         //reload the page
+// })
+
+
+//show today date:
+const dateElement = document.getElementById("date");
+let options = {weekday:'long', month:'short', day:'numeric'};
+let today = new Date();
+dateElement.innerHTML = today.toLocaleDateString("en-US", options);
+
+//localStorage:
 
 localStorage.setItem('key', 'value');
 let variable = localStorage.getItem('key');
@@ -30,6 +49,8 @@ if (data){
     id = 0;
 }
 
+
+
   
 const Adding=text=>{
     ToDoList.push(
@@ -46,7 +67,7 @@ const Checking=target=>{
 };
 
 
-=======
+
 const Toggling=target=>{
     return ToDoList.filter(obj=>obj.IsChecked==0)
 };
@@ -54,10 +75,11 @@ const Toggling=target=>{
 document.addEventListener("keyup",function(event){
     if(event.keyCode==13){
         const toDo=input.value;
+        //if the input isn't empty:
         if (toDo){
             Adding(toDo)
         }
-        input.value="";
+        input.value="";  //clear the input
         Render(ToDoList)
     }
 })
