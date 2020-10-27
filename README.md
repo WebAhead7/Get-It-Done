@@ -29,8 +29,6 @@ Helps with motivation: To do lists are a great motivational tool because you can
 ## Table of Contents
 
 * [About the Project](#about-the-project)<br>
-
-
 * [Built With](#built-with)<br>
 * [Getting Started](#getting-started)<br>
 * [Contact Us](#contact )<br>
@@ -82,10 +80,10 @@ do on mobile, laptop, desktop, tablet and even your watch!
 
 <!-- GETTING STARTED -->
 ## Getting Started
-1. Type any task you need to do it.
-2. Chick any task that it done.
-3. 
-4.  
+1. Type any task you need to do it then click ENTER. You can add more tasks.
+2. If any task is done, click in the square near the task to move the colour from blue (open task) to red colour (task done). 
+3. If you have a list of tasks that some are done , you can filter it by clicking the filter button.
+4. You can clear all tasks by clicking on clear button.
  
 
 <!-- Contact US -->
