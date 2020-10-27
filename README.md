@@ -52,6 +52,7 @@ All it takes is just a few minutes every day to keep a to do list up to date. Wi
 </p><p align="center">
   <img src="/img/readmeeq2.gif" width=720px height=360px />
 </p>
+
 # Get-It-Done
 
 Welcome to Get-It-Done Organize anything with anyone, anywhere
