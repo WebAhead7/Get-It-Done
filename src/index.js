@@ -2,11 +2,12 @@
 let ToDoList = JSON.parse(localStorage.getItem("ToDoList") || "[]");
 const Clear = document.querySelector(".clear")
 const Toggle = document.querySelector(".toggle")//FILTER
-const Add = document.querySelector("add")
+const Add = document.querySelector(".fa-plus-circle")
 const list = document.querySelector("#list")
 
 const Deleting = target => {
     ToDoList.splice(target, 1);
+    localStorage.setItem("ToDoList", JSON.stringify(ToDoList))
 };
 
 // //clear the list:
@@ -81,6 +82,18 @@ Toggle.addEventListener("click", function (event) {
     }
 })
 
+Add.addEventListener("click", function (event) {
+    const toDo = input.value;
+    console.log(toDo);
+
+    //if the input isn't empty:
+    if (toDo) {
+        Adding(toDo)
+    }
+    input.value = "";  //clear the input
+    Render(ToDoList)
+})
+
 document.addEventListener("keyup", function (event) {
     if (event.keyCode == 13) {
         const toDo = input.value;
@@ -97,6 +110,7 @@ list.addEventListener("click", function (event) {
     let element_div = event.target;
     element_id = element_div.parentElement.id;
     if (element_div.getAttribute("job") === "check") {
+        console.log(element_div);
         if (element_div)
             Checking(element_id);
     }

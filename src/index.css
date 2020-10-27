@@ -60,8 +60,22 @@ body{
 }
 
 
-.fa-check-circle#checked1{
+#checked1{
   color: green;
+}
+
+li .fa-check-circle:hover{
+  cursor: pointer;
+  text-shadow: 1px 3px 5px green;
+  transform: scale();
+  font-size: large;
+}
+
+li .fa-trash:hover{
+  cursor: pointer;
+  text-shadow: 1px 3px 5px red;
+  transform: scale();
+  font-size: large;
 }
 
 
@@ -75,9 +89,6 @@ p.checked1{
   border-color: green;
   
 }
-
-
-
 
 
 .list {
@@ -101,4 +112,8 @@ p.checked1{
 .item{
   display: flex;
   justify-content: space-between;  
+}
+
+li{
+  display: inline; 
 }
