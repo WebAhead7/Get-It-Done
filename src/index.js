@@ -40,8 +40,6 @@ Clear.addEventListener("click", function (event) {
     localStorage.clear();
     ToDoList = JSON.parse(localStorage.getItem("ToDoList") || "[]");
     Render(ToDoList)
-    console.log("dssds");
-
 })
 
 
