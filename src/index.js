@@ -10,12 +10,6 @@ const Deleting = target => {
     localStorage.setItem("ToDoList", JSON.stringify(ToDoList))
 };
 
-// //clear the list:
-// const clear = document.querySelector(".clear");
-// clear.addEventListener('click', function(){
-//     localStorage.clear();
-//     location.reload();                         //reload the page
-// })
 
 //show today date:
 const dateElement = document.getElementById("date");
@@ -23,27 +17,8 @@ let options = { weekday: 'long', month: 'short', day: 'numeric' };
 let today = new Date();
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
-//localStorage:
 
-// localStorage.setItem('key', 'value');
-// let variable = localStorage.getItem('key');
-// localStorage.setItem("TODO", JSON.stringify(LIST));
-
-let LIST, id;
-let data = localStorage.getItem("TODO");
-if (data) {
-    LIST = JSON.parse(data);
-    loadToDo(LIST);
-    id = LIST.length
-
-} else {
-    LIST = [];
-    id = 0;
-}
-
-
-
-
+//Adding:
 const Adding = text => {
     ToDoList.push(
         {
@@ -55,6 +30,7 @@ const Adding = text => {
 };
 
 
+// Checking:
 const Checking = target => {
     ToDoList[target].IsChecked = (ToDoList[target].IsChecked + 1) % 2;
     localStorage.setItem("ToDoList", JSON.stringify(ToDoList))
@@ -68,19 +44,26 @@ Clear.addEventListener("click", function (event) {
 
 })
 
-Toggle.addEventListener("click", function (event) {
-    console.log((Toggle.id));
 
-    if ("false" === Toggle.id) {
+//Toggling:
+const Toggling = Toggle_id => {
+    if (Toggle_id === "false") {
         let filtered = ToDoList.filter(mission => !mission.IsChecked)
-        Render(filtered)
         Toggle.id = "true";
+        return filtered;
     }
     else {
-        Render(ToDoList);
-        Toggle.id = "false"
+        Toggle.id = "false";
+        return ToDoList;
     }
+};
+
+Toggle.addEventListener("click", function (event) {
+    let Toggle_id = Toggle.id;
+    Render(Toggling(Toggle_id));
 })
+
+
 
 Add.addEventListener("click", function (event) {
     const toDo = input.value;
@@ -120,6 +103,9 @@ list.addEventListener("click", function (event) {
     Render(ToDoList);
 })
 
+
+
+//Rendering:
 const Render = arr => {
     let html = ``;
     list.innerHTML = ""
