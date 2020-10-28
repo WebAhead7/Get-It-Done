@@ -9,14 +9,15 @@ People have to chase you to get things done
 You find it a struggle to keep to deadlines
 Don’t think you’re unusual because there are thousands of people who struggle with the same every day, not just in the workplace but in their personal life too. Luckily, there is something very simple you can do to keep your life and work more organised.
 </p>
-  <h2 align="center"><a href="https://webahead7.github.io/Get-It-Done/">TRY IT NOW</h2>
 
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
   <img src="/src/img/header.jpg" width=720px height=360px />
 </p>
+  <h2 align="center"><a href="https://webahead7.github.io/Get-It-Done/">TRY IT NOW</h2>
 
+#some info
 <p>
 I'm a huge fan of to-do lists. They help me stay organized, prioritize my day, and add structure to an otherwise chaotic schedule. I recently discovered what appears to be the best yet simplest way to keep a to-do list.
 When you complete a task, you can cross it off your list. This gives you a sense of progress and achievement, something you’ll lack if you’re always rushing from one task to the next. If you feel a sense of achievement, it spurs you on and motivates you to keep moving forward.
