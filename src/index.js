@@ -67,8 +67,6 @@ Toggle.addEventListener("click", function (event) {
 
 Add.addEventListener("click", function (event) {
     const toDo = input.value;
-    console.log(toDo);
-
     //if the input isn't empty:
     if (toDo) {
         Adding(toDo)
@@ -93,7 +91,6 @@ list.addEventListener("click", function (event) {
     let element_div = event.target;
     element_id = element_div.parentElement.id;
     if (element_div.getAttribute("job") === "check") {
-        console.log(element_div);
         if (element_div)
             Checking(element_id);
     }
@@ -109,13 +106,14 @@ list.addEventListener("click", function (event) {
 const Render = arr => {
     let html = ``;
     list.innerHTML = ""
-    arr.forEach(element => {
+    arr.forEach((element, index) => {
         html = `<li class="item"  id="${arr.indexOf(element)}">
             <p class="fa fa-check-circle" id="checked${element.IsChecked}" job="check"></p>
-            <p  class="checked${element.IsChecked}">${element.text}</p>
+            <p  class="checked${element.IsChecked}"></p>
             <p class="fa fa-trash" id="trash" job="delete"></p>
         </li>`
         list.insertAdjacentHTML("beforeend", html);
+        list.lastChild.childNodes[3].textContent = element.text
     });
 
 }
