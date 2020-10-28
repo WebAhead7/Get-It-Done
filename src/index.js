@@ -6,8 +6,10 @@ const Add = document.querySelector(".fa-plus-circle")
 const list = document.querySelector("#list")
 
 const Deleting = target => {
-    ToDoList.splice(target, 1);
-    localStorage.setItem("ToDoList", JSON.stringify(ToDoList))
+    if (target < ToDoList.length) {
+        ToDoList.splice(target, 1);
+        localStorage.setItem("ToDoList", JSON.stringify(ToDoList))
+    }
 };
 
 
@@ -20,13 +22,15 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 //Adding:
 const Adding = text => {
-    ToDoList.push(
-        {
-            text: text,
-            IsChecked: 0
-        }
-    )
-    localStorage.setItem("ToDoList", JSON.stringify(ToDoList))
+    if (text.length) {
+        ToDoList.push(
+            {
+                text: text,
+                IsChecked: 0
+            }
+        )
+        localStorage.setItem("ToDoList", JSON.stringify(ToDoList))
+    }
 };
 
 
